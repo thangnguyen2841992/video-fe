@@ -1,0 +1,159 @@
+.navbar {
+    background-color: 	#FF7F50;
+}
+.list-navbar-2 {
+    margin-left: 10%;
+}
+.logo {
+    margin-left: 10%;
+}
+.search-btn {
+    width: 110px;
+    text-align: left;
+    background-color: #111111;
+    color: white;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    /*opacity: 1; !* Firefox *!*/
+}
+/*.input-search {*/
+/*    background-color:#111111 ;*/
+/*}*/
+.nav-item a {
+    font-size: 18px;
+}
+/*separator*/
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
+.row {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 24%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 1%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*Mobile-Nav*/
+.nav__bars-btn {
+    font-size: 25px;
+    color: #fff;
+    display: none;
+    margin-left: 10%;
+
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #ffffff;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+
+.nav__mobile-list {
+    margin-top: 24px;
+}
+
+.nav__mobile-link {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    padding: 8px 0;
+    font-size: 1.4rem
+;
+}
+.nav__mobile-close {
+    font-size: 20px;
+    color: #666;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.form-check-input:checked ~ .nav__overlay {
+    display: block;
+}
+.form-check-input:checked ~ .nav__mobile {
+    transform: translateX(0);
+    opacity: 1;
+}
+@media (max-width: 1023px) {
+    .nav__bars-btn {
+        display: block;
+    }
+
+    .list-navbar-2 {
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .column {
+        width: 49%;
+    }
+}
+@media  (max-width: 768px) {
+    .column {
+        width: 100%;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
